@@ -1,0 +1,50 @@
+
+  .content {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px 30px;
+    max-width: 100%;
+  }
+ 
+  .explore{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    /* background-color: red; */
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid red;
+  }
+
+  .explore_text p, .locations_text p, .learn_text p{
+    font-size: 20px;
+    line-height: 30px;
+    margin: 15px;
+  }
+
+  .explore_text button, .locations_text button, .learn_text button{
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .locations{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-left: 20px;
+    /* background-color: green; */
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid green;
+  }
+  .learn{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid blue;
+
+  }
