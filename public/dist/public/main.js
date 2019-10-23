@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>explore works!</h1>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Explore</h1>\n<h3>This page gives you information of the place you want to visit</h3>\n\n<div>\n    <h2>Continent</h2>\n    <form>\n      <input #criteria (input)=\"continentCriteria(criteria.value)\" placeholder=\"Search Continent\" />\n    </form>  \n    <ul class=\"heroes\" [@filterAnimation]=\"continentTotal\">\n        <li *ngFor=\"let continent of continents\" class=\"heroes\">\n            <div class=\"inner\">\n            <span class=\"badge\">{{ continent.id }}</span>\n            <span>{{ continent.name }}</span>\n            </div>\n        </li>\n    </ul>\n</div>\n<div>\n  <h2>America and Caribe</h2>\n\n  <form>\n    <input #criteria (input)=\"updateCriteria(criteria.value)\" placeholder=\"Search Country\" />\n  </form>  \n\n  <ul class=\"heroes\" [@filterAnimation]=\"heroTotal\">\n      <li *ngFor=\"let hero of heroes\" class=\"hero\">\n          <div class=\"inner\">\n          <span class=\"badge\">{{ hero.id }}</span>\n          <span>{{ hero.name }}</span>\n          </div>\n      </li>\n  </ul>\n</div>");
 
 /***/ }),
 
@@ -482,7 +482,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2V4cGxvcmUvZXhwbG9yZS5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".heroes {\n  margin: 0 0 2em 0;\n  list-style-type: none;\n  padding: 0;\n  width: 15em;\n}\n\n.heroes li {\n  position: relative;\n  height: 2.3em;\n  overflow:hidden;\n  margin: .5em;\n}\n\n.heroes li > .inner {\n  cursor: pointer;\n  background-color: #EEE;\n  padding: .3em 0;\n  height: 1.6em;\n  border-radius: 4px;\n  width: 19em;\n}\n\n.heroes li:hover > .inner {\n  color: #607D8B;\n  background-color: #DDD;\n  transform: translateX(.1em);\n}\n\n.heroes a {\n  color: #888;\n  text-decoration: none;\n  position: relative;\n  display: block;\n  width: 250px;\n}\n\n.heroes a:hover {\n  color:#607D8B;\n}\n\n.heroes .badge {\n  display: inline-block;\n  font-size: small;\n  color: white;\n  padding: 0.8em 0.7em 0 0.7em;\n  background-color: #607D8B;\n  line-height: 1em;\n  position: relative;\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  min-width: 16px;\n  text-align: right;\n  margin-right: .8em;\n  border-radius: 4px 0 0 4px;\n}\n\n.button {\n  background-color: #eee;\n  border: none;\n  padding: 5px 10px;\n  border-radius: 4px;\n  cursor: pointer;\n  cursor: hand;\n  font-family: Arial;\n}\n\nbutton:hover {\n  background-color: #cfd8dc;\n}\n\nbutton.delete {\n  position: relative;\n  left: 24em;\n  top: -32px;\n  background-color: gray !important;\n  color: white;\n  display: inherit;\n  padding: 5px 8px;\n  width: 2em;\n}\n\ninput {\n  font-size: 100%;\n  margin-bottom: 2px;\n  width: 11em;\n}\n\n.heroes input {\n  position: relative;\n  top: -3px;\n  width: 12em;\n}\n\n/*\nCopyright Google LLC. All Rights Reserved.\nUse of this source code is governed by an MIT-style license that\ncan be found in the LICENSE file at http://angular.io/license\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXhwbG9yZS9leHBsb3JlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIscUJBQXFCO0VBQ3JCLFVBQVU7RUFDVixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLGVBQWU7RUFDZixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGVBQWU7RUFDZixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxzQkFBc0I7RUFDdEIsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHFCQUFxQjtFQUNyQixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLDRCQUE0QjtFQUM1Qix5QkFBeUI7RUFDekIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsU0FBUztFQUNULGFBQWE7RUFDYixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQiwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLFVBQVU7RUFDVixpQ0FBaUM7RUFDakMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsVUFBVTtBQUNaOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7QUFDYjs7QUFHQTs7OztDQUlDIiwiZmlsZSI6InNyYy9hcHAvZXhwbG9yZS9leHBsb3JlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVyb2VzIHtcbiAgbWFyZ2luOiAwIDAgMmVtIDA7XG4gIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbiAgcGFkZGluZzogMDtcbiAgd2lkdGg6IDE1ZW07XG59XG5cbi5oZXJvZXMgbGkge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogMi4zZW07XG4gIG92ZXJmbG93OmhpZGRlbjtcbiAgbWFyZ2luOiAuNWVtO1xufVxuXG4uaGVyb2VzIGxpID4gLmlubmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRUVFO1xuICBwYWRkaW5nOiAuM2VtIDA7XG4gIGhlaWdodDogMS42ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgd2lkdGg6IDE5ZW07XG59XG5cbi5oZXJvZXMgbGk6aG92ZXIgPiAuaW5uZXIge1xuICBjb2xvcjogIzYwN0Q4QjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0RERDtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC4xZW0pO1xufVxuXG4uaGVyb2VzIGEge1xuICBjb2xvcjogIzg4ODtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogMjUwcHg7XG59XG5cbi5oZXJvZXMgYTpob3ZlciB7XG4gIGNvbG9yOiM2MDdEOEI7XG59XG5cbi5oZXJvZXMgLmJhZGdlIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBmb250LXNpemU6IHNtYWxsO1xuICBjb2xvcjogd2hpdGU7XG4gIHBhZGRpbmc6IDAuOGVtIDAuN2VtIDAgMC43ZW07XG4gIGJhY2tncm91bmQtY29sb3I6ICM2MDdEOEI7XG4gIGxpbmUtaGVpZ2h0OiAxZW07XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbGVmdDogLTFweDtcbiAgdG9wOiAtNHB4O1xuICBoZWlnaHQ6IDEuOGVtO1xuICBtaW4td2lkdGg6IDE2cHg7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBtYXJnaW4tcmlnaHQ6IC44ZW07XG4gIGJvcmRlci1yYWRpdXM6IDRweCAwIDAgNHB4O1xufVxuXG4uYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcbiAgYm9yZGVyOiBub25lO1xuICBwYWRkaW5nOiA1cHggMTBweDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGN1cnNvcjogaGFuZDtcbiAgZm9udC1mYW1pbHk6IEFyaWFsO1xufVxuXG5idXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2ZkOGRjO1xufVxuXG5idXR0b24uZGVsZXRlIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBsZWZ0OiAyNGVtO1xuICB0b3A6IC0zMnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBncmF5ICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogaW5oZXJpdDtcbiAgcGFkZGluZzogNXB4IDhweDtcbiAgd2lkdGg6IDJlbTtcbn1cblxuaW5wdXQge1xuICBmb250LXNpemU6IDEwMCU7XG4gIG1hcmdpbi1ib3R0b206IDJweDtcbiAgd2lkdGg6IDExZW07XG59XG5cbi5oZXJvZXMgaW5wdXQge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogLTNweDtcbiAgd2lkdGg6IDEyZW07XG59XG5cblxuLypcbkNvcHlyaWdodCBHb29nbGUgTExDLiBBbGwgUmlnaHRzIFJlc2VydmVkLlxuVXNlIG9mIHRoaXMgc291cmNlIGNvZGUgaXMgZ292ZXJuZWQgYnkgYW4gTUlULXN0eWxlIGxpY2Vuc2UgdGhhdFxuY2FuIGJlIGZvdW5kIGluIHRoZSBMSUNFTlNFIGZpbGUgYXQgaHR0cDovL2FuZ3VsYXIuaW8vbGljZW5zZVxuKi8iXX0= */");
 
 /***/ }),
 
@@ -498,21 +498,186 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExploreComponent", function() { return ExploreComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm2015/animations.js");
+/* harmony import */ var _mock_heroes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mock-heroes */ "./src/app/explore/mock-heroes.ts");
+/* harmony import */ var _mock_continent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mock-continent */ "./src/app/explore/mock-continent.ts");
+
+
+
 
 
 let ExploreComponent = class ExploreComponent {
-    constructor() { }
+    constructor() {
+        this.animatePage = true;
+        this._heroes = [];
+        this._continents = [];
+        this.heroTotal = -1;
+        this.continentTotal = -1;
+    }
+    get heroes() {
+        return this._heroes;
+    }
+    get continents() {
+        return this._continents;
+    }
     ngOnInit() {
+        this._heroes = _mock_heroes__WEBPACK_IMPORTED_MODULE_3__["HEROES"];
+        this._continents = _mock_continent__WEBPACK_IMPORTED_MODULE_4__["CONTINENT"];
+    }
+    continentCriteria(criteria) {
+        criteria = criteria ? criteria.trim() : '';
+        console.log();
+        this._continents = _mock_continent__WEBPACK_IMPORTED_MODULE_4__["CONTINENT"].filter(continent => continent.name.toLowerCase().includes(criteria.toLowerCase()));
+        const newContinentTotal = this.continents.length;
+        if (this.continentTotal !== newContinentTotal) {
+            this.continentTotal = newContinentTotal;
+        }
+        else if (!criteria) {
+            this.continentTotal = -1;
+        }
+    }
+    updateCriteria(criteria) {
+        criteria = criteria ? criteria.trim() : '';
+        this._heroes = _mock_heroes__WEBPACK_IMPORTED_MODULE_3__["HEROES"].filter(hero => hero.name.toLowerCase().includes(criteria.toLowerCase()));
+        const newTotal = this.heroes.length;
+        if (this.heroTotal !== newTotal) {
+            this.heroTotal = newTotal;
+        }
+        else if (!criteria) {
+            this.heroTotal = -1;
+        }
     }
 };
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"])('@pageAnimations')
+], ExploreComponent.prototype, "animatePage", void 0);
 ExploreComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-explore',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./explore.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/explore/explore.component.html")).default,
+        animations: [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('pageAnimations', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["query"])('.continent, .hero, form', [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["style"])({ opacity: 0, transform: 'translateY(-100px)' }),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["stagger"])(-30, [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])('500ms cubic-bezier(0.35, 0, 0.25, 1)', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["style"])({ opacity: 1, transform: 'none' }))
+                        ])
+                    ])
+                ])
+            ]),
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('filterAnimation', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':enter, * => 0, * => -1', []),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':increment', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["query"])(':enter', [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["style"])({ opacity: 0, width: '0px' }),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["stagger"])(50, [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["style"])({ opacity: 1, width: '*' })),
+                        ]),
+                    ], { optional: true })
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])(':decrement', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["query"])(':leave', [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["stagger"])(50, [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["style"])({ opacity: 0, width: '0px' })),
+                        ]),
+                    ])
+                ]),
+            ]),
+        ],
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./explore.component.css */ "./src/app/explore/explore.component.css")).default]
     })
 ], ExploreComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/explore/mock-continent.ts":
+/*!*******************************************!*\
+  !*** ./src/app/explore/mock-continent.ts ***!
+  \*******************************************/
+/*! exports provided: CONTINENT */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONTINENT", function() { return CONTINENT; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+const CONTINENT = [
+    { id: 1, name: 'America & Caribe' },
+    { id: 2, name: 'Europe' },
+    { id: 3, name: 'Africa' },
+    { id: 4, name: 'Asia' },
+    { id: 5, name: 'Oceania' }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/explore/mock-heroes.ts":
+/*!****************************************!*\
+  !*** ./src/app/explore/mock-heroes.ts ***!
+  \****************************************/
+/*! exports provided: HEROES */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HEROES", function() { return HEROES; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+const HEROES = [
+    { id: 1, name: 'Canada' },
+    { id: 2, name: 'Mexico' },
+    { id: 3, name: 'Guatemala' },
+    { id: 4, name: 'El Salvador' },
+    { id: 5, name: 'Honduras' },
+    { id: 6, name: 'Nicaragua' },
+    { id: 7, name: 'Costa Rica' },
+    { id: 8, name: 'Panama' },
+    { id: 9, name: 'Colombia' },
+    { id: 10, name: 'Venezuela' },
+    { id: 11, name: 'Surinam' },
+    { id: 12, name: 'Guyana' },
+    { id: 13, name: 'Brazil' },
+    { id: 14, name: 'Ecuador' },
+    { id: 15, name: 'Peru' },
+    { id: 16, name: 'Bolivia' },
+    { id: 17, name: 'Chile' },
+    { id: 18, name: 'Argentina' },
+    { id: 19, name: 'Paraguay' },
+    { id: 20, name: 'Uruguay' },
+    { id: 21, name: 'Bahamas' },
+    { id: 22, name: 'Turks and Caicos Islands' },
+    { id: 23, name: 'Cuba' },
+    { id: 24, name: 'Haiti' },
+    { id: 25, name: 'Dominican Republic' },
+    { id: 26, name: 'Jamaica' },
+    { id: 27, name: 'Puerto Rico' },
+    { id: 28, name: 'Aruba' },
+    { id: 29, name: 'Bonaire' },
+    { id: 30, name: 'Curacao' },
+    { id: 31, name: 'Angilla' },
+    { id: 32, name: 'Antigua and Barbuda' },
+    { id: 33, name: 'British Virgin Islands' },
+    { id: 34, name: 'Guadeloupe' },
+    { id: 35, name: 'Barbados' },
+    { id: 36, name: 'Trinidad and Tobago' },
+];
+// export const HEROES: Hero[] = [
+//   { id: 11, name: 'Dr Nice' },
+//   { id: 12, name: 'Narco' },
+//   { id: 13, name: 'Bombasto' },
+//   { id: 14, name: 'Celeritas' },
+//   { id: 15, name: 'Magneta' },
+//   { id: 16, name: 'RubberMan' },
+//   { id: 17, name: 'Dynama' },
+//   { id: 18, name: 'Dr IQ' },
+//   { id: 19, name: 'Magma' },
+//   { id: 20, name: 'Tornado' }
+// ];
 
 
 /***/ }),

@@ -1,1 +1,33 @@
-<h1>explore works!</h1>
+<h1>Explore</h1>
+<h3>This page gives you information of the place you want to visit</h3>
+
+<div>
+    <h2>Continent</h2>
+    <form>
+      <input #criteria (input)="continentCriteria(criteria.value)" placeholder="Search Continent" />
+    </form>  
+    <ul class="heroes" [@filterAnimation]="continentTotal">
+        <li *ngFor="let continent of continents" class="heroes">
+            <div class="inner">
+            <span class="badge">{{ continent.id }}</span>
+            <span>{{ continent.name }}</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<div>
+  <h2>America and Caribe</h2>
+
+  <form>
+    <input #criteria (input)="updateCriteria(criteria.value)" placeholder="Search Country" />
+  </form>  
+
+  <ul class="heroes" [@filterAnimation]="heroTotal">
+      <li *ngFor="let hero of heroes" class="hero">
+          <div class="inner">
+          <span class="badge">{{ hero.id }}</span>
+          <span>{{ hero.name }}</span>
+          </div>
+      </li>
+  </ul>
+</div>
