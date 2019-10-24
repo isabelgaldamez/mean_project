@@ -2,6 +2,8 @@ import { Component, HostBinding ,OnInit } from '@angular/core';
 import { trigger, transition, animate, style, query, stagger } from '@angular/animations';
 import { HEROES } from './mock-heroes';
 import { CONTINENT } from './mock-continent'
+import { HttpClient } from '@angular/common/http';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-explore',
@@ -45,9 +47,10 @@ export class ExploreComponent implements OnInit {
 
   _heroes = [];
   _continents = [];
-
+  _country_info: any = {}
   heroTotal = -1;
   continentTotal = -1;
+  display = false
 
   get heroes() {
     return this._heroes;
@@ -57,28 +60,27 @@ export class ExploreComponent implements OnInit {
     return this._continents;
   }
 
-  constructor() { }
+  constructor(private _httpService : HttpService ,private _http: HttpClient) { }
 
   ngOnInit() {
     this._heroes = HEROES;
     this._continents = CONTINENT;
   }
-  continentCriteria(criteria: string) {
-    criteria = criteria ? criteria.trim() : '';
-    console.log()
-    this._continents = CONTINENT.filter(continent => continent.name.toLowerCase().includes(criteria.toLowerCase()));
-    const newContinentTotal = this.continents.length;
+  // continentCriteria(criteria: string) {
+  //   criteria = criteria ? criteria.trim() : '';
+  //   console.log()
+  //   this._continents = CONTINENT.filter(continent => continent.name.toLowerCase().includes(criteria.toLowerCase()));
+  //   const newContinentTotal = this.continents.length;
 
-    if (this.continentTotal !== newContinentTotal) {
-      this.continentTotal = newContinentTotal;
-    } else if (!criteria) {
-      this.continentTotal = -1;
-    }
-  }
+  //   if (this.continentTotal !== newContinentTotal) {
+  //     this.continentTotal = newContinentTotal;
+  //   } else if (!criteria) {
+  //     this.continentTotal = -1;
+  //   }
+  // }
 
   updateCriteria(criteria: string) {
     criteria = criteria ? criteria.trim() : '';
-
     this._heroes = HEROES.filter(hero => hero.name.toLowerCase().includes(criteria.toLowerCase()));
     const newTotal = this.heroes.length;
 
@@ -88,5 +90,13 @@ export class ExploreComponent implements OnInit {
       this.heroTotal = -1;
     }
   }
-
+  
+  searchCountry(country: string){
+    this.display = true;
+    const observable = this._httpService.getCountryData(country);
+    observable.subscribe(countryData => {
+      this._country_info = countryData[0];
+      console.log('country info : ', this._country_info);
+    })
+  }
 }

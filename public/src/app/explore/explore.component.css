@@ -92,8 +92,30 @@ input {
   top: -3px;
   width: 12em;
 }
-
-
+.search{
+  margin-left: 100px;
+  margin-top: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+.info {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 100px;
+  margin-top: 20px
+}
+.flag{
+  display: inline-block;
+  vertical-align: top;
+  /* margin-left: 100px; */
+  margin-top: 20px;
+  margin-left: 100px;
+  /* margin-top: 30px; */
+}
+.flag img{
+  height: 300px;
+  width: 300px;
+}
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

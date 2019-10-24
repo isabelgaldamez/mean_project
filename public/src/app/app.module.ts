@@ -10,7 +10,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { LearnComponent } from './learn/learn.component';
 import { LocationsComponent } from './locations/locations.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule, //used for animations
+    NgbModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
