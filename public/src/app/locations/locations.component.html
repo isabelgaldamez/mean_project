@@ -1,1 +1,48 @@
-<h1>locations works!</h1>
+<h1>Search for places to visit in {{_searchCountry}} </h1>
+<div class='places_list'>
+    <!-- <form (submit) = 'getCountryInfo(_searchCountry)'>
+        <p>{{ _userSelection | json }}</p>
+        Enter : <input type='text' [(ngModel)] = _userSelection name='name'>
+    </form> -->
+
+    <!-- To bind to the component.ts
+    1. make sure to have on the form tag (submit) = 'function to be called' 
+    2. on the variable where you are interested to get the user input, use [(ngModel)] = "_userSelection"
+    where '_userSelection' is a variable declared on the .ts file
+    3. Make sure that the app.component.ts has the import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+    and @NgModule({imports: [FormsModule,]}) 
+    -->
+    <form (submit) = 'getCountryInfo(_searchCountry)' class="example-form">
+        <!-- <p>{{ _userSelection | json }}</p> -->
+        <mat-form-field class="example-full-width">
+            <input  type="text" [(ngModel)] = "_userSelection" placeholder="Pick Location" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" >
+                {{option}}
+            </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    <div class='places_info' *ngIf='_displayPlaces'>
+        <h1>Info about {{_userSelection}} in {{_searchCountry}}</h1>
+        <div class = 'places'>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location Name</th>
+                        <th>Location Address</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let place of _placesFound'>
+                        <td>{{place.name}}</td>
+                        <td>{{place.formatted_address}}</td>
+                        <td>{{place.rating}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+<div>

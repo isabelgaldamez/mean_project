@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Explore</h1>\n<h3>This page gives you information of the place you want to visit</h3>\n\n<div class='search'>\n  <h2>America and Caribe</h2>\n  <form>\n    <input #criteria (input)=\"updateCriteria(criteria.value)\" placeholder=\"Search Country\" />\n  </form>\n\n  <ul class=\"heroes\" [@filterAnimation]=\"heroTotal\">\n    <li *ngFor=\"let hero of heroes\" class=\"hero\">\n      <div class=\"inner\">\n        <span class=\"badge\">{{ hero.id }}</span>\n        <span (click)='searchCountry(hero.name)'>{{ hero.name }}</span>\n      </div>\n    </li>\n  </ul>\n</div>\n\n<div *ngIf='display' class='info'>\n  <h2>Information about {{_country_info.name}}</h2>\n  <h4>Capital is {{_country_info.capital}}</h4>\n  <div *ngFor='let currecy of _country_info.currencies'>\n    <h4>Currency is: {{currecy.name}}</h4>\n  </div>\n  <div *ngFor='let language of _country_info.languages'>\n    <h4>Language is: {{language.name}}</h4>\n  </div>\n  <h4>Region: {{_country_info.region}}</h4>\n \n  <div *ngFor='let code of _country_info.callingCodes'>\n    <h4>Calling code: + {{code}}</h4>\n  </div>\n  <!-- DROP DOWN -->\n  <div class=\"row\">\n      <div class=\"col\">\n        <div ngbDropdown class=\"d-inline-block\">\n          <button class=\"btn btn-outline-primary\" id=\"dropdownBasic1\" ngbDropdownToggle>Toggle dropdown</button>\n          <div ngbDropdownMenu aria-labelledby=\"dropdownBasic1\">\n            <button ngbDropdownItem>Action - 1</button>\n            <button ngbDropdownItem>Another Action</button>\n            <button ngbDropdownItem>Something else is here</button>\n          </div>\n        </div>\n      </div>\n    \n      <div class=\"col text-right\">\n        <div ngbDropdown placement=\"top-right\" class=\"d-inline-block\">\n          <button class=\"btn btn-outline-primary\" id=\"dropdownBasic2\" ngbDropdownToggle>Toggle dropup</button>\n          <div ngbDropdownMenu aria-labelledby=\"dropdownBasic2\">\n            <button ngbDropdownItem>Action - 1</button>\n            <button ngbDropdownItem>Another Action</button>\n            <button ngbDropdownItem>Something else is here</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  <!-- END OF DROP DOWN -->\n</div>\n<div *ngIf='display' class='flag'>\n  <img src='{{_country_info.flag}}'>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<link href=\"node_modules/@angular/material/prebuilt-themes/indigo-pink.css\" rel=\"stylesheet\">\n<h1>Explore</h1>\n<h3>This page gives you information of the place you want to visit</h3>\n\n<div class='search'>\n  <h2>America and Caribe</h2>\n  <form>\n    <input #criteria (input)=\"updateCriteria(criteria.value)\" placeholder=\"Search Country\" />\n  </form>\n\n  <ul class=\"heroes\" [@filterAnimation]=\"heroTotal\">\n    <li *ngFor=\"let hero of heroes\" class=\"hero\">\n      <div class=\"inner\">\n        <span class=\"badge\">{{ hero.id }}</span>\n        <span (click)='searchCountry(hero.name)'>{{ hero.name }}</span>\n      </div>\n    </li>\n  </ul>\n</div>\n\n<div *ngIf='display' class='info'>\n  <h2>Information about {{_country_info.name}}</h2>\n  <h4>Capital is {{_country_info.capital}}</h4>\n  <div *ngFor='let currecy of _country_info.currencies'>\n    <h4>Currency is: {{currecy.name}}</h4>\n  </div>\n  <div *ngFor='let language of _country_info.languages'>\n    <h4>Language is: {{language.name}}</h4>\n  </div>\n  <h4>Region: {{_country_info.region}}</h4>\n  <div *ngFor='let code of _country_info.callingCodes'>\n    <h4>Calling code: + {{code}}</h4>\n  </div>\n  <button routerLink=\"/locations/{{_country_info.name}}\">Show me around!</button>\n</div>\n<div *ngIf='display' class='flag'>\n  <img src='{{_country_info.flag}}'>\n</div>\n");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Main Content -->\n<div class=\"content\" role=\"main\">\n<!-- <img src={{background_image}}> -->\n    <div class='explore'>\n    <h1>Explore</h1>\n    <div class='explore_text'>\n        <p>Explore about your next destination, find out about currency exchange, language and much more ...</p>\n        <button [routerLink] = \"['/explore']\">Let's explore!</button>\n    </div>\n    </div>\n    <div class='locations'>\n    <h1>Locations</h1>\n    <div class='locations_text'>\n        <p>Get to know about possible places to visit</p>\n        <button [routerLink] = \"['/locations']\">Show me around</button>\n    </div>\n    </div>\n    <div class='learn'>\n    <h1>Learn</h1>\n    <div class='learn_text'>\n        <p>Learn about the country, language and culture </p>\n        <button [routerLink] = \"['/learn']\">I want to learn!</button>\n    </div>\n    </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Main Content -->\n<div class=\"content\" role=\"main\">\n<!-- <img src={{background_image}}> -->\n    <div class='explore'>\n    <h1>Explore</h1>\n    <div class='explore_text'>\n        <p>Explore about your next destination, find out about currency exchange, language and much more ...</p>\n        <button [routerLink] = \"['/explore']\">Let's explore!</button>\n    </div>\n    </div>\n    <div class='locations'>\n    <h1>Locations</h1>\n    <div class='locations_text'>\n        <p>Get to know about possible places to visit</p>\n        <button [routerLink] = \"['/locations/USA']\">Show me around</button>\n    </div>\n    </div>\n    <!-- <div class='learn'>\n    <h1>Learn</h1>\n    <div class='learn_text'>\n        <p>Learn about the country, language and culture </p>\n        <button [routerLink] = \"['/learn']\">I want to learn!</button>\n    </div>\n    </div> -->\n</div>\n");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>locations works!</h1>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Search for places to visit in {{_searchCountry}} </h1>\n<div class='places_list'>\n    <!-- <form (submit) = 'getCountryInfo(_searchCountry)'>\n        <p>{{ _userSelection | json }}</p>\n        Enter : <input type='text' [(ngModel)] = _userSelection name='name'>\n    </form> -->\n\n    <!-- To bind to the component.ts\n    1. make sure to have on the form tag (submit) = 'function to be called' \n    2. on the variable where you are interested to get the user input, use [(ngModel)] = \"_userSelection\"\n    where '_userSelection' is a variable declared on the .ts file\n    3. Make sure that the app.component.ts has the import {FormsModule, ReactiveFormsModule} from '@angular/forms';\n    and @NgModule({imports: [FormsModule,]}) \n    -->\n    <form (submit) = 'getCountryInfo(_searchCountry)' class=\"example-form\">\n        <!-- <p>{{ _userSelection | json }}</p> -->\n        <mat-form-field class=\"example-full-width\">\n            <input  type=\"text\" [(ngModel)] = \"_userSelection\" placeholder=\"Pick Location\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n            <mat-autocomplete #auto=\"matAutocomplete\">\n            <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\" >\n                {{option}}\n            </mat-option>\n            </mat-autocomplete>\n        </mat-form-field>\n    </form>\n    <div class='places_info' *ngIf='_displayPlaces'>\n        <h1>Info about {{_userSelection}} in {{_searchCountry}}</h1>\n        <div class = 'places'>\n            <table>\n                <thead>\n                    <tr>\n                        <th>Location Name</th>\n                        <th>Location Address</th>\n                        <th>Rating</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor='let place of _placesFound'>\n                        <td>{{place.name}}</td>\n                        <td>{{place.formatted_address}}</td>\n                        <td>{{place.rating}}</td>\n                    </tr>\n\n                </tbody>\n            </table>\n        </div>\n    </div>\n<div>\n");
 
 /***/ }),
 
@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', component: _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_6__["LandingPageComponent"] },
     { path: 'explore', component: _explore_explore_component__WEBPACK_IMPORTED_MODULE_3__["ExploreComponent"] },
-    { path: 'locations', component: _locations_locations_component__WEBPACK_IMPORTED_MODULE_5__["LocationsComponent"] },
+    { path: 'locations/:country', component: _locations_locations_component__WEBPACK_IMPORTED_MODULE_5__["LocationsComponent"] },
     { path: 'learn', component: _learn_learn_component__WEBPACK_IMPORTED_MODULE_4__["LearnComponent"] },
     { path: '', pathMatch: 'full', redirectTo: '/' },
     { path: '**', redirectTo: '/' }
@@ -435,7 +435,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _learn_learn_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./learn/learn.component */ "./src/app/learn/learn.component.ts");
 /* harmony import */ var _locations_locations_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./locations/locations.component */ "./src/app/locations/locations.component.ts");
 /* harmony import */ var _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./landing-page/landing-page.component */ "./src/app/landing-page/landing-page.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm2015/select.js");
+/* harmony import */ var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/autocomplete */ "./node_modules/@angular/material/esm2015/autocomplete.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
 
 
 
@@ -465,7 +471,11 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_12__["NgbModule"]
+            _angular_material_select__WEBPACK_IMPORTED_MODULE_12__["MatSelectModule"],
+            _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_13__["MatAutocompleteModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_14__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_15__["MatInputModule"],
         ],
         providers: [_http_service__WEBPACK_IMPORTED_MODULE_5__["HttpService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -485,7 +495,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".heroes {\n  margin: 0 0 2em 0;\n  list-style-type: none;\n  padding: 0;\n  width: 15em;\n}\n\n.heroes li {\n  position: relative;\n  height: 2.3em;\n  overflow:hidden;\n  margin: .5em;\n}\n\n.heroes li > .inner {\n  cursor: pointer;\n  background-color: #EEE;\n  padding: .3em 0;\n  height: 1.6em;\n  border-radius: 4px;\n  width: 19em;\n}\n\n.heroes li:hover > .inner {\n  color: #607D8B;\n  background-color: #DDD;\n  transform: translateX(.1em);\n}\n\n.heroes a {\n  color: #888;\n  text-decoration: none;\n  position: relative;\n  display: block;\n  width: 250px;\n}\n\n.heroes a:hover {\n  color:#607D8B;\n}\n\n.heroes .badge {\n  display: inline-block;\n  font-size: small;\n  color: white;\n  padding: 0.8em 0.7em 0 0.7em;\n  background-color: #607D8B;\n  line-height: 1em;\n  position: relative;\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  min-width: 16px;\n  text-align: right;\n  margin-right: .8em;\n  border-radius: 4px 0 0 4px;\n}\n\n.button {\n  background-color: #eee;\n  border: none;\n  padding: 5px 10px;\n  border-radius: 4px;\n  cursor: pointer;\n  cursor: hand;\n  font-family: Arial;\n}\n\nbutton:hover {\n  background-color: #cfd8dc;\n}\n\nbutton.delete {\n  position: relative;\n  left: 24em;\n  top: -32px;\n  background-color: gray !important;\n  color: white;\n  display: inherit;\n  padding: 5px 8px;\n  width: 2em;\n}\n\ninput {\n  font-size: 100%;\n  margin-bottom: 2px;\n  width: 11em;\n}\n\n.heroes input {\n  position: relative;\n  top: -3px;\n  width: 12em;\n}\n\n.search{\n  margin-left: 100px;\n  margin-top: 30px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.info {\n  display: inline-block;\n  vertical-align: top;\n  margin-left: 100px;\n  margin-top: 20px\n}\n\n.flag{\n  display: inline-block;\n  vertical-align: top;\n  /* margin-left: 100px; */\n  margin-top: 20px;\n  margin-left: 100px;\n  /* margin-top: 30px; */\n}\n\n.flag img{\n  height: 300px;\n  width: 300px;\n}\n\n/*\nCopyright Google LLC. All Rights Reserved.\nUse of this source code is governed by an MIT-style license that\ncan be found in the LICENSE file at http://angular.io/license\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXhwbG9yZS9leHBsb3JlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIscUJBQXFCO0VBQ3JCLFVBQVU7RUFDVixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLGVBQWU7RUFDZixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGVBQWU7RUFDZixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxzQkFBc0I7RUFDdEIsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHFCQUFxQjtFQUNyQixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLDRCQUE0QjtFQUM1Qix5QkFBeUI7RUFDekIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsU0FBUztFQUNULGFBQWE7RUFDYixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQiwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLFVBQVU7RUFDVixpQ0FBaUM7RUFDakMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsVUFBVTtBQUNaOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7QUFDYjs7QUFDQTtFQUNFLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIscUJBQXFCO0VBQ3JCLG1CQUFtQjtBQUNyQjs7QUFDQTtFQUNFLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCO0FBQ0Y7O0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsbUJBQW1CO0VBQ25CLHdCQUF3QjtFQUN4QixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQUN4Qjs7QUFDQTtFQUNFLGFBQWE7RUFDYixZQUFZO0FBQ2Q7O0FBQ0E7Ozs7Q0FJQyIsImZpbGUiOiJzcmMvYXBwL2V4cGxvcmUvZXhwbG9yZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlcm9lcyB7XG4gIG1hcmdpbjogMCAwIDJlbSAwO1xuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gIHBhZGRpbmc6IDA7XG4gIHdpZHRoOiAxNWVtO1xufVxuXG4uaGVyb2VzIGxpIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDIuM2VtO1xuICBvdmVyZmxvdzpoaWRkZW47XG4gIG1hcmdpbjogLjVlbTtcbn1cblxuLmhlcm9lcyBsaSA+IC5pbm5lciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0VFRTtcbiAgcGFkZGluZzogLjNlbSAwO1xuICBoZWlnaHQ6IDEuNmVtO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHdpZHRoOiAxOWVtO1xufVxuXG4uaGVyb2VzIGxpOmhvdmVyID4gLmlubmVyIHtcbiAgY29sb3I6ICM2MDdEOEI7XG4gIGJhY2tncm91bmQtY29sb3I6ICNEREQ7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCguMWVtKTtcbn1cblxuLmhlcm9lcyBhIHtcbiAgY29sb3I6ICM4ODg7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDI1MHB4O1xufVxuXG4uaGVyb2VzIGE6aG92ZXIge1xuICBjb2xvcjojNjA3RDhCO1xufVxuXG4uaGVyb2VzIC5iYWRnZSB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgZm9udC1zaXplOiBzbWFsbDtcbiAgY29sb3I6IHdoaXRlO1xuICBwYWRkaW5nOiAwLjhlbSAwLjdlbSAwIDAuN2VtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjA3RDhCO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGxlZnQ6IC0xcHg7XG4gIHRvcDogLTRweDtcbiAgaGVpZ2h0OiAxLjhlbTtcbiAgbWluLXdpZHRoOiAxNnB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgbWFyZ2luLXJpZ2h0OiAuOGVtO1xuICBib3JkZXItcmFkaXVzOiA0cHggMCAwIDRweDtcbn1cblxuLmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZWU7XG4gIGJvcmRlcjogbm9uZTtcbiAgcGFkZGluZzogNXB4IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBjdXJzb3I6IGhhbmQ7XG4gIGZvbnQtZmFtaWx5OiBBcmlhbDtcbn1cblxuYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NmZDhkYztcbn1cblxuYnV0dG9uLmRlbGV0ZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbGVmdDogMjRlbTtcbiAgdG9wOiAtMzJweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogZ3JheSAhaW1wb3J0YW50O1xuICBjb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGluaGVyaXQ7XG4gIHBhZGRpbmc6IDVweCA4cHg7XG4gIHdpZHRoOiAyZW07XG59XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAycHg7XG4gIHdpZHRoOiAxMWVtO1xufVxuXG4uaGVyb2VzIGlucHV0IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IC0zcHg7XG4gIHdpZHRoOiAxMmVtO1xufVxuLnNlYXJjaHtcbiAgbWFyZ2luLWxlZnQ6IDEwMHB4O1xuICBtYXJnaW4tdG9wOiAzMHB4O1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHZlcnRpY2FsLWFsaWduOiB0b3A7XG59XG4uaW5mbyB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcbiAgbWFyZ2luLWxlZnQ6IDEwMHB4O1xuICBtYXJnaW4tdG9wOiAyMHB4XG59XG4uZmxhZ3tcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB2ZXJ0aWNhbC1hbGlnbjogdG9wO1xuICAvKiBtYXJnaW4tbGVmdDogMTAwcHg7ICovXG4gIG1hcmdpbi10b3A6IDIwcHg7XG4gIG1hcmdpbi1sZWZ0OiAxMDBweDtcbiAgLyogbWFyZ2luLXRvcDogMzBweDsgKi9cbn1cbi5mbGFnIGltZ3tcbiAgaGVpZ2h0OiAzMDBweDtcbiAgd2lkdGg6IDMwMHB4O1xufVxuLypcbkNvcHlyaWdodCBHb29nbGUgTExDLiBBbGwgUmlnaHRzIFJlc2VydmVkLlxuVXNlIG9mIHRoaXMgc291cmNlIGNvZGUgaXMgZ292ZXJuZWQgYnkgYW4gTUlULXN0eWxlIGxpY2Vuc2UgdGhhdFxuY2FuIGJlIGZvdW5kIGluIHRoZSBMSUNFTlNFIGZpbGUgYXQgaHR0cDovL2FuZ3VsYXIuaW8vbGljZW5zZVxuKi8iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".heroes {\n  margin: 0 0 2em 0;\n  list-style-type: none;\n  padding: 0;\n  width: 15em;\n}\n\n.heroes li {\n  position: relative;\n  height: 2.3em;\n  overflow:hidden;\n  margin: .5em;\n}\n\n.heroes li > .inner {\n  cursor: pointer;\n  background-color: #EEE;\n  padding: .3em 0;\n  height: 1.6em;\n  border-radius: 4px;\n  width: 19em;\n}\n\n.heroes li:hover > .inner {\n  color: #607D8B;\n  background-color: #DDD;\n  transform: translateX(.1em);\n}\n\n.heroes a {\n  color: #888;\n  text-decoration: none;\n  position: relative;\n  display: block;\n  width: 250px;\n}\n\n.heroes a:hover {\n  color:#607D8B;\n}\n\n.heroes .badge {\n  display: inline-block;\n  font-size: small;\n  color: white;\n  padding: 0.8em 0.7em 0 0.7em;\n  background-color: #607D8B;\n  line-height: 1em;\n  position: relative;\n  left: -1px;\n  top: -4px;\n  height: 1.8em;\n  min-width: 16px;\n  text-align: right;\n  margin-right: .8em;\n  border-radius: 4px 0 0 4px;\n}\n\n.button {\n  background-color: #eee;\n  border: none;\n  padding: 5px 10px;\n  border-radius: 4px;\n  cursor: pointer;\n  cursor: hand;\n  font-family: Arial;\n}\n\nbutton:hover {\n  background-color: #cfd8dc;\n}\n\nbutton.delete {\n  position: relative;\n  left: 24em;\n  top: -32px;\n  background-color: gray !important;\n  color: white;\n  display: inherit;\n  padding: 5px 8px;\n  width: 2em;\n}\n\ninput {\n  font-size: 100%;\n  margin-bottom: 2px;\n  width: 11em;\n}\n\n.heroes input {\n  position: relative;\n  top: -3px;\n  width: 12em;\n}\n\n.search{\n  margin-left: 100px;\n  margin-top: 30px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.info {\n  display: inline-block;\n  vertical-align: top;\n  margin-left: 100px;\n  margin-top: 20px\n}\n\n.info button{\n  font-size: 15px;\n  padding: 8px;\n  border-radius: 10px;\n  border: 1px solid blue;\n}\n\n.flag{\n  display: inline-block;\n  vertical-align: top;\n  /* margin-left: 100px; */\n  margin-top: 20px;\n  margin-left: 100px;\n  /* margin-top: 30px; */\n}\n\n.flag img{\n  height: 300px;\n  width: 350px;\n}\n\n/*\nCopyright Google LLC. All Rights Reserved.\nUse of this source code is governed by an MIT-style license that\ncan be found in the LICENSE file at http://angular.io/license\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXhwbG9yZS9leHBsb3JlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIscUJBQXFCO0VBQ3JCLFVBQVU7RUFDVixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLGVBQWU7RUFDZixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGVBQWU7RUFDZixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxzQkFBc0I7RUFDdEIsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHFCQUFxQjtFQUNyQixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLDRCQUE0QjtFQUM1Qix5QkFBeUI7RUFDekIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsU0FBUztFQUNULGFBQWE7RUFDYixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQiwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLFVBQVU7RUFDVixpQ0FBaUM7RUFDakMsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsVUFBVTtBQUNaOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFdBQVc7QUFDYjs7QUFDQTtFQUNFLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIscUJBQXFCO0VBQ3JCLG1CQUFtQjtBQUNyQjs7QUFDQTtFQUNFLHFCQUFxQjtFQUNyQixtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCO0FBQ0Y7O0FBQ0E7RUFDRSxlQUFlO0VBQ2YsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixzQkFBc0I7QUFDeEI7O0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsbUJBQW1CO0VBQ25CLHdCQUF3QjtFQUN4QixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQUN4Qjs7QUFDQTtFQUNFLGFBQWE7RUFDYixZQUFZO0FBQ2Q7O0FBQ0E7Ozs7Q0FJQyIsImZpbGUiOiJzcmMvYXBwL2V4cGxvcmUvZXhwbG9yZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlcm9lcyB7XG4gIG1hcmdpbjogMCAwIDJlbSAwO1xuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gIHBhZGRpbmc6IDA7XG4gIHdpZHRoOiAxNWVtO1xufVxuXG4uaGVyb2VzIGxpIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDIuM2VtO1xuICBvdmVyZmxvdzpoaWRkZW47XG4gIG1hcmdpbjogLjVlbTtcbn1cblxuLmhlcm9lcyBsaSA+IC5pbm5lciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0VFRTtcbiAgcGFkZGluZzogLjNlbSAwO1xuICBoZWlnaHQ6IDEuNmVtO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHdpZHRoOiAxOWVtO1xufVxuXG4uaGVyb2VzIGxpOmhvdmVyID4gLmlubmVyIHtcbiAgY29sb3I6ICM2MDdEOEI7XG4gIGJhY2tncm91bmQtY29sb3I6ICNEREQ7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCguMWVtKTtcbn1cblxuLmhlcm9lcyBhIHtcbiAgY29sb3I6ICM4ODg7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDI1MHB4O1xufVxuXG4uaGVyb2VzIGE6aG92ZXIge1xuICBjb2xvcjojNjA3RDhCO1xufVxuXG4uaGVyb2VzIC5iYWRnZSB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgZm9udC1zaXplOiBzbWFsbDtcbiAgY29sb3I6IHdoaXRlO1xuICBwYWRkaW5nOiAwLjhlbSAwLjdlbSAwIDAuN2VtO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjA3RDhCO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGxlZnQ6IC0xcHg7XG4gIHRvcDogLTRweDtcbiAgaGVpZ2h0OiAxLjhlbTtcbiAgbWluLXdpZHRoOiAxNnB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgbWFyZ2luLXJpZ2h0OiAuOGVtO1xuICBib3JkZXItcmFkaXVzOiA0cHggMCAwIDRweDtcbn1cblxuLmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlZWU7XG4gIGJvcmRlcjogbm9uZTtcbiAgcGFkZGluZzogNXB4IDEwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBjdXJzb3I6IGhhbmQ7XG4gIGZvbnQtZmFtaWx5OiBBcmlhbDtcbn1cblxuYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NmZDhkYztcbn1cblxuYnV0dG9uLmRlbGV0ZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgbGVmdDogMjRlbTtcbiAgdG9wOiAtMzJweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogZ3JheSAhaW1wb3J0YW50O1xuICBjb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGluaGVyaXQ7XG4gIHBhZGRpbmc6IDVweCA4cHg7XG4gIHdpZHRoOiAyZW07XG59XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAycHg7XG4gIHdpZHRoOiAxMWVtO1xufVxuXG4uaGVyb2VzIGlucHV0IHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IC0zcHg7XG4gIHdpZHRoOiAxMmVtO1xufVxuLnNlYXJjaHtcbiAgbWFyZ2luLWxlZnQ6IDEwMHB4O1xuICBtYXJnaW4tdG9wOiAzMHB4O1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHZlcnRpY2FsLWFsaWduOiB0b3A7XG59XG4uaW5mbyB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcbiAgbWFyZ2luLWxlZnQ6IDEwMHB4O1xuICBtYXJnaW4tdG9wOiAyMHB4XG59XG4uaW5mbyBidXR0b257XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgcGFkZGluZzogOHB4O1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCBibHVlO1xufVxuLmZsYWd7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcbiAgLyogbWFyZ2luLWxlZnQ6IDEwMHB4OyAqL1xuICBtYXJnaW4tdG9wOiAyMHB4O1xuICBtYXJnaW4tbGVmdDogMTAwcHg7XG4gIC8qIG1hcmdpbi10b3A6IDMwcHg7ICovXG59XG4uZmxhZyBpbWd7XG4gIGhlaWdodDogMzAwcHg7XG4gIHdpZHRoOiAzNTBweDtcbn1cbi8qXG5Db3B5cmlnaHQgR29vZ2xlIExMQy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC5cblVzZSBvZiB0aGlzIHNvdXJjZSBjb2RlIGlzIGdvdmVybmVkIGJ5IGFuIE1JVC1zdHlsZSBsaWNlbnNlIHRoYXRcbmNhbiBiZSBmb3VuZCBpbiB0aGUgTElDRU5TRSBmaWxlIGF0IGh0dHA6Ly9hbmd1bGFyLmlvL2xpY2Vuc2VcbiovIl19 */");
 
 /***/ }),
 
@@ -720,12 +730,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token',
+        'Access-Control-Allow-Origin': '*'
+    })
+};
+let headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
+headers = headers.set('Access-Control-Allow-Origin', '*');
 let HttpService = class HttpService {
     constructor(_http) {
         this._http = _http;
     }
     getCountryData(country) {
         return this._http.get(`https://restcountries.eu/rest/v2/name/${country}`);
+    }
+    getLocationInformation(country, locationType) {
+        locationType = locationType.split(" ").join("%20"); // user input may have spaces so here is to split and join with %20
+        return this._http.get(`/api/${locationType}/${country}`);
     }
 };
 HttpService.ctorParameters = () => [
@@ -838,7 +861,7 @@ LearnComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvY2F0aW9ucy9sb2NhdGlvbnMuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.places_list{\n  margin-left: 30px;\n  margin-top: 20px;\n}\n\n.places{\n  margin-left: 30px;\n}\n\nbutton{\n  padding:10px;\n  color: green;\n  font-size: 15px;\n  border-radius: 10px;\n  width: 80px;\n  background-color: white;\n  border: 2px solid green;\n}\n\ntable {\n  width: 70%;\n}\n\ntbody tr{\n  margin-bottom: 15px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9jYXRpb25zL2xvY2F0aW9ucy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxpQkFBaUI7RUFDakIsZ0JBQWdCO0FBQ2xCOztBQUNBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixlQUFlO0VBQ2YsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCx1QkFBdUI7RUFDdkIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsVUFBVTtBQUNaOztBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvbG9jYXRpb25zL2xvY2F0aW9ucy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4YW1wbGUtZm9ybSB7XG4gIG1pbi13aWR0aDogMTUwcHg7XG4gIG1heC13aWR0aDogNTAwcHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcbiAgd2lkdGg6IDEwMCU7XG59XG4ucGxhY2VzX2xpc3R7XG4gIG1hcmdpbi1sZWZ0OiAzMHB4O1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuLnBsYWNlc3tcbiAgbWFyZ2luLWxlZnQ6IDMwcHg7XG59XG5cbmJ1dHRvbntcbiAgcGFkZGluZzoxMHB4O1xuICBjb2xvcjogZ3JlZW47XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgd2lkdGg6IDgwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IDJweCBzb2xpZCBncmVlbjtcbn1cblxudGFibGUge1xuICB3aWR0aDogNzAlO1xufVxudGJvZHkgdHJ7XG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -854,13 +877,66 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationsComponent", function() { return LocationsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+
+
 
 
 let LocationsComponent = class LocationsComponent {
-    constructor() { }
+    //on this page I need to call the service so that I can make api calls, ActivatedRoute to use for params which is passing 
+    // parameters through the route 
+    constructor(_httpService, _route, _router, _http) {
+        this._httpService = _httpService;
+        this._route = _route;
+        this._router = _router;
+        this._http = _http;
+        this._displayPlaces = false;
+        this._placesFound = [];
+        this._image = [];
+        // Used for the form where displays options
+        this.myControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
+        this.options = ['Beaches', 'Museums', 'Restaurants', 'Gym', 'Mall', 'Parks', 'Temples'];
+    }
     ngOnInit() {
+        this._route.params.subscribe((params) => {
+            this.getCountryInfo(params.country);
+        });
+        this.filteredOptions = this.myControl.valueChanges
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(''), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(value => this._filter(value)));
+    }
+    _filter(value) {
+        const filterValue = value.toLowerCase();
+        return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    }
+    getCountryInfo(_country) {
+        this._searchCountry = _country;
+        //This request is sent to the Angular server, which makes a request to express server. If i do not do the 
+        //express server, it will give a CORS error, this is a way to bypass this error
+        if (this._userSelection != undefined) {
+            const observable = this._httpService.getLocationInformation(this._searchCountry, this._userSelection);
+            observable.subscribe(locationInfo => {
+                this._displayPlaces = true;
+                this._placesFound = locationInfo['results'];
+                for (let photo of locationInfo['results']) {
+                    //results is an array of dictionaries, I need to access the key in that dictionary which is 
+                }
+            });
+        }
     }
 };
+LocationsComponent.ctorParameters = () => [
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_5__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] }
+];
 LocationsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-locations',

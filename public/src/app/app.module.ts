@@ -10,7 +10,11 @@ import { ExploreComponent } from './explore/explore.component';
 import { LearnComponent } from './learn/learn.component';
 import { LocationsComponent } from './locations/locations.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material'
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule, //used for animations
-    NgbModule
+    MatSelectModule, //from material slider 
+    MatAutocompleteModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule, //used for the input locations section
+
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

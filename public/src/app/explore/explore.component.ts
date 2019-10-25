@@ -44,13 +44,14 @@ import { HttpService } from '../http.service';
 export class ExploreComponent implements OnInit {
   @HostBinding('@pageAnimations')
   public animatePage = true;
-
+  selectedValue: string;
   _heroes = [];
   _continents = [];
   _country_info: any = {}
   heroTotal = -1;
   continentTotal = -1;
   display = false
+
 
   get heroes() {
     return this._heroes;
