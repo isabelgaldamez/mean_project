@@ -1,38 +1,40 @@
 <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
-<h1>Explore</h1>
-<h3>This page gives you information of the place you want to visit</h3>
+<div class='container'>
+  <h1>Explore</h1>
+  <h3>This page gives you information of the place you want to visit</h3>
 
-<div class='search'>
-  <h2>America and Caribe</h2>
-  <form>
-    <input #criteria (input)="updateCriteria(criteria.value)" placeholder="Search Country" />
-  </form>
+  <div class='search'>
+    <h2>America and Caribe</h2>
+    <form>
+      <input #criteria (input)="updateCriteria(criteria.value)" placeholder="Search Country" />
+    </form>
 
-  <ul class="heroes" [@filterAnimation]="heroTotal">
-    <li *ngFor="let hero of heroes" class="hero">
-      <div class="inner">
-        <span class="badge">{{ hero.id }}</span>
-        <span (click)='searchCountry(hero.name)'>{{ hero.name }}</span>
-      </div>
-    </li>
-  </ul>
-</div>
+    <ul class="heroes" [@filterAnimation]="heroTotal">
+      <li *ngFor="let hero of heroes" class="hero">
+        <div class="inner">
+          <span class="badge">{{ hero.id }}</span>
+          <span (click)='searchCountry(hero.name)'>{{ hero.name }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
 
-<div *ngIf='display' class='info'>
-  <h2>Information about {{_country_info.name}}</h2>
-  <h4>Capital is {{_country_info.capital}}</h4>
-  <div *ngFor='let currecy of _country_info.currencies'>
-    <h4>Currency is: {{currecy.name}}</h4>
+  <div *ngIf='display' class='info'>
+    <h2>Information about {{_country_info.name}}</h2>
+    <h4>Capital is {{_country_info.capital}}</h4>
+    <div *ngFor='let currecy of _country_info.currencies'>
+      <h4>Currency is: {{currecy.name}}</h4>
+    </div>
+    <div *ngFor='let language of _country_info.languages'>
+      <h4>Language is: {{language.name}}</h4>
+    </div>
+    <h4>Region: {{_country_info.region}}</h4>
+    <div *ngFor='let code of _country_info.callingCodes'>
+      <h4>Calling code: + {{code}}</h4>
+    </div>
+    <button routerLink="/locations/{{_country_info.name}}">Show me around!</button>
   </div>
-  <div *ngFor='let language of _country_info.languages'>
-    <h4>Language is: {{language.name}}</h4>
+  <div *ngIf='display' class='flag'>
+    <img src='{{_country_info.flag}}'>
   </div>
-  <h4>Region: {{_country_info.region}}</h4>
-  <div *ngFor='let code of _country_info.callingCodes'>
-    <h4>Calling code: + {{code}}</h4>
-  </div>
-  <button routerLink="/locations/{{_country_info.name}}">Show me around!</button>
-</div>
-<div *ngIf='display' class='flag'>
-  <img src='{{_country_info.flag}}'>
 </div>

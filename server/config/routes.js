@@ -23,7 +23,7 @@ module.exports = (app) => {
     });
     app.get('/api/:locationType/:country', (req, res)=>{
         console.log('routers.js', req.params.locationType);
-        request(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${req.params.locationType}%20in%20${req.params.country}%20&radius=200000&key=AIzaSyAw7xotI2V4stqK96xR6DwUUFSF5NtHurI`,(error, response, body) => {
+        request(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${req.params.locationType}%20in%20${req.params.country}%20&radius=200000&key=`,(error, response, body) => {
             res.json(JSON.parse(body)) //api sends response in a string, converting into a dictionary 
         });
     });
